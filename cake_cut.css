@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.cake-cutting-page {
+    padding: 20px;
+    text-align: center;
+}
+
+.message-container {
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(to right, #ffcccb, #ffe4e1);
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cake-image {
+    width: 100%;
+    max-width: 400px;
+    animation: appear 1s ease-in-out;
+    border-radius: 100%;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#callButton {
+    background-color: #ff4081; /* Change to your desired color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#callButton:hover {
+    background-color: #ff007f; /* Change to your desired hover color */
+}
+
+.quote{
+        max-width: 600px; /* Controls the maximum width of the quote */
+        margin: 20px auto; /* Centers the quote and adds some spacing */
+        font-style: italic; /* Optional: makes the quote italic */
+        text-align: center; /* Centers the text within the block */
+        padding: auto;
+        background-color: yellow;
+        color: black;
+        border-radius: 10px;
+        border: solid white 3px;
+    }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <!--Style sheet-->
+  <link rel="stylesheet" href="photos.css">
+  <link rel="stylesheet" href="style1.css">
+
+
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+  <!--fonts Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/x-icon" href="">
+</head>
+
+<body>
+  <nav class="navbar">
+    <h1>Infinity <i class="fa-solid fa-infinity"></i></h1>
+    <img id="background-image" src="moon01.jpg" alt="">
+
+
+    <div class="navbar-links" id="navbar-links">
+      <p class="navbar-link"><a href="index.html">Home</a></p>
+      <p class="navbar-link"><a href="photos.html">Photos</a></p>
+      <p class="navbar-link"><a href="wishes.html">Wishes</a></p>
+      <p class="navbar-link"><a href="cake_cut.html">Cake Cutting</a></p>
+
+    </div>
+    <div id="menuToggle" onclick="toggleNav()" class="menu-icon">
+      ☰ <!-- Hamburger icon -->
+    </div>
+  </nav>
+  <!-- Side Navbar-->
+  <div id="sideNav" class="side-navbar">
+    <div class="close-btn" onclick="toggleNav()">✖</div>
+    <a href="index.html">Home</a>
+    <a href="photos.html">Photos</a>
+    <a href="wishes.html">Wishes</a>
+    <a href="cake_cut.html">Cake Cutting</a>
+
+</div>
+
+  </div>
+
+  <main>
+    <section class="hero">
+      <h1>Happy Birthday, Deepa!</h1>
+      <p>Wishing you <Span style="color: yellow;"> EVERY SECOND</Span> of your life filled with <span
+          style="color: yellow;"> LOVE❤️, LAUGHTER🤣, and ALL YOUR FAVORITE THINGS</span>.</p>
+          <button id="heartButton">❤️
+            <span class="tooltip">Don't press me! 😨</span>
+          </button>
+          <p class="quote">"You have this quiet strength that makes me feel like everything's going to be okay."</p>
+          <p class="author">— Sadham</p>
+          <p><span style="color: hsl(200, 100%, 50%);">The above👆 HEART🫰 is your's🫵, Don't Press it. Please!</span></p>
+    
+        </section>
+        <div class="countdown-wrapper">
+          <section class="countdown">
+            <h2>Time Spent on Earth:</h2>
+            <div class="countdown-timer">
+              <span id="years">0</span> years
+              <span id="months">0</span> months
+              <span id="days">0</span> days
+              <span id="hours">0</span> hours
+              <span id="minutes">0</span> minutes
+              <span id="seconds">0</span> seconds
+            </div>
+          </section>
+          
+          <section class="known-timer">
+            <h2>Time We've Known Each Other:</h2>
+            <div class="countdown-timer">
+                <span id="knownYears">0</span> years
+                <span id="knownMonths">0</span> months
+                <span id="knownDays">0</span> days
+                <span id="knownHours">0</span> hours
+                <span id="knownMinutes">0</span> minutes
+                <span id="knownSeconds">0</span> seconds
+            </div>
+          </section>
+          
+        </div>
+        
+  </main>  
+
+  <div class="slider-container">
+    <!-- Main Media Display -->
+    <div class="main-slider">
+      <img id="mainMedia" src="" alt="Main Media">
+      <video id="mainVideo" controls></video>
+    </div>
+
+    <!-- Play/Pause Button -->
+    <div class="controls">
+      <button id="playPauseBtn" onclick="togglePlayPause()">&#9658; Play</button>
+    </div>
+
+    <!-- Thumbnail Section with Horizontal Scrolling -->
+    <div class="thumbnail-section">
+      <div id="thumbnails" class="thumbnails">
+        <!-- Thumbnails will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <!-- Gallery View (displaying all media items in a smaller view) -->
+    <div class="gallery-view">
+      <h3>Endearing Moments📸✨</h3>
+<p style="text-align: center;color: white; margin-bottom: 20px;">Find the group la doop uh down here👇 ?</p>
+      <div id="gallery" class="gallery">
+        <!-- Media items will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="photos.js"></script>
+</body>
+
+</html>

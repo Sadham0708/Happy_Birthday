@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Fredoka", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+
+#background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Nav bar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: rgba(203, 202, 202, 0.19) 0px 10px 20px, rgba(202, 202, 202, 0.23) 0px 6px 6px;
+  color: whitesmoke;
+}
+
+
+.navbar-links {
+  display: flex;
+  /* Links in a row */
+  gap: 20px;
+  /* Space between links */
+  /* column-gap: 30px; */
+
+}
+
+
+.navbar-links a {
+  text-decoration: none;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+  color: #Ffdb58;
+
+}
+
+.menu-icon {
+  display: none;
+  /* Hide by default */
+  cursor: pointer;
+}
+
+/* Side Navigation */
+.side-navbar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  /* Hidden by default */
+  width: 250px;
+  /* Width of the side nav */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: left 2s ease;
+  z-index: 1000;
+  /* Ensure it's above other content */
+  padding-top: 20px;
+  /* Space for close button */
+}
+
+
+.side-navbar a {
+  display: block;
+  padding: 15px;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.side-navbar-links a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.close-btn {
+  font-size: 20px;
+  /* Make it smaller */
+  color: whitesmoke;
+  cursor: pointer;
+  position: absolute;
+  /* Positioning */
+  top: 10px;
+  /* Distance from top */
+  right: 10px;
+  /* Distance from right */
+}
+
+/* Show the side nav when it's active */
+.side-navbar.active {
+  left: 0;
+  /* Move into view */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 700px) {
+  .navbar-links {
+    display: none;
+    /* Hide links */
+  }
+
+  .menu-icon {
+    display: block;
+    /* Show hamburger icon */
+  }
+}
+
+/* Hero Section Styles */
+
+.hero {
+  background-color: transparent;
+  padding: 2em;
+  text-align: center;
+  color: rgb(225, 225, 252);
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Heart Button */
+.hero button {
+  background-color: transparent;
+  font-size: 100px;
+  cursor: pointer;
+  margin-top: 20px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+
+/* Heartbeat animation for the red heart */
+.hero button.heartbeat {
+  font-size: 100px;
+  animation: heartbeat 1s infinite;
+}
+
+/* No animation for the broken heart */
+.hero button.broken {
+  font-size: 100px;
+  animation: none;
+}
+
+/* Keyframes for heartbeat animation */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.2);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Tooltip Styles */
+.tooltip {
+  visibility: hidden;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.785);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 14px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  /* Position above the button */
+  left: 50%;
+  margin-left: -50px;
+  /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hero button:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  /* Show tooltip on hover */
+}
+
+.quote {
+  max-width: 600px;
+  /* Controls the maximum width of the quote */
+  margin: 20px auto;
+  /* Centers the quote and adds some spacing */
+  font-style: italic;
+  /* Optional: makes the quote italic */
+  text-align: center;
+  /* Centers the text within the block */
+  padding: auto;
+  background-color: yellow;
+  color: black;
+  border-radius: 10px;
+  border: solid white 3px;
+}
+
+
+
+/* Countdown Section Styles*/
+
+/* CSS for side-by-side countdown sections */
+.countdown-wrapper {
+  display: flex;
+  justify-content: center;
+  /* Center the content */
+  gap: 50px;
+  /* Adjust the spacing between the two sections */
+  margin: 20px auto;
+  /* Center horizontally with margin */
+  padding: 20px;
+}
+
+.countdown,
+.known-timer {
+  flex: 1;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Optional background color */
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  /* Adjust to match your website theme */
+}
+
+.countdown h2,
+.known-timer h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: yellow;
+}
+
+
+.countdown-timer {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+
+
+/* Inspiration Words Section Styles */
+
+.inspiration-words {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Optional background color */
+  padding: 2em;
+  text-align: center;
+}
+
+.inspiration-words h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.inspiration-words ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.inspiration-words li {
+  margin-bottom: 20px;
+}
+
+.inspiration-words p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-style: italic;
+  color: #Ffdb58;
+}
+
+.inspiration-words strong {
+  color: hsl(146, 100%, 50%);
+}
+
+.inspiration-words span {
+  font-size: 16px;
+  /* color: #999999; */
+  font-weight: bold;
+}
+
+.inspiration-words img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  /* adjust the color and style to your liking */
+  margin: 5px;
+  /* add some margin to the horizontal line */
+}
+
+footer {
+  background-color: transparent;
+  /* light gray background */
+  padding: 20px;
+  /* add some padding to the footer */
+  text-align: center;
+  /* center the text */
+  color: white;
+  /* dark gray text color */
+}
+
+footer p {
+  margin-bottom: 10px;
+  /* add some space between paragraphs */
+}
+
+footer p:hover {
+  background-color: #Ffdb58;
+  color: #000;
+}
+
+
+.author {
+  color: hsl(200, 100%, 50%);
+  background-color: pink;
+  color: black;
+  border-radius: 10px;
+  border: solid lightgreen 3px;
+  text-align: center;
+  max-width: 100px;
+  /* Controls the maximum width of the quote */
+  margin: 20px auto;
+  /* Centers the quote and adds some spacing */
+  font-style: italic;
+  /* Optional: makes the quote italic */
+  text-align: center;
+  /* Centers the text within the block */
+}
