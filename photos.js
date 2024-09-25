@@ -279,3 +279,26 @@ function generateMediaItems() {
 // Auto-start with the first media
 showMedia(0);
 generateMediaItems();
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all audio elements
+    const audioItems = document.querySelectorAll('.audio-item audio');
+
+    // Function to pause all audio elements except the one being played
+    function pauseOtherAudios(currentAudio) {
+        audioItems.forEach(audio => {
+            if (audio !== currentAudio) {
+                audio.pause(); // Pause the other audio
+                audio.currentTime = 0; // Reset to the beginning if you want to
+            }
+        });
+    }
+
+    // Add event listeners to each audio element
+    audioItems.forEach(audio => {
+        audio.addEventListener('play', () => {
+            pauseOtherAudios(audio); // Pause other audios when this one plays
+        });
+    });
+});
+
