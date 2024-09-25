@@ -42,22 +42,41 @@ body {
   /* Links in a row */
   gap: 20px;
   /* Space between links */
-  /* column-gap: 30px; */
+  column-gap: 20px;
+  background-color: var(--color-white-shade);
 
 }
 
-
-.navbar-links a {
-  text-decoration: none;
-  color: whitesmoke;
+.html-btn{
+  font-family: "Fredoka", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  background-color: white;
+  color:black;
   cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition:
+      scale 0.25s ease-in,
+      opacity 0.25s ease-in,
+      filter 0.25s ease-in;
+
+&:hover{
+  scale: 1.2;
+  
+
+}
+}
+.navbar-links:has(.html-btn:hover) .html-btn:not(:hover){
+  scale: 0.8;
+  opacity: 0.8;
+  filter: blur(4px);
 }
 
-.navbar-links a:hover {
-  text-decoration: underline;
-  color: #Ffdb58;
-
-}
 
 .menu-icon {
   display: none;
@@ -90,9 +109,9 @@ body {
   text-decoration: none;
 }
 
-.side-navbar-links a:hover {
+.side-navbar a:hover {
   text-decoration: underline;
-  color: white;
+  color: rgb(0, 208, 255);
 }
 
 .close-btn {

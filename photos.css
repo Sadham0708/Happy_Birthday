@@ -32,25 +32,7 @@ body {
 }
 
 
-.navbar-links {
-  display: flex; /* Links in a row */
-  gap: 20px; /* Space between links */
-  /* column-gap: 30px; */
 
-}
-
-
-.navbar-links a{
-  text-decoration: none;
-  color:whitesmoke;
-  cursor: pointer;
-}
-
-.navbar-links a:hover{
-  text-decoration: underline;
-  color: #Ffdb58;
-  
-}
 
 .menu-icon {
   display: none; /* Hide by default */
